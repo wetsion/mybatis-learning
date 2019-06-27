@@ -1,5 +1,6 @@
 package site.wetsion.mybatislearning.mapper;
 
+import org.apache.ibatis.annotations.CacheNamespace;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -12,6 +13,7 @@ import site.wetsion.mybatislearning.modal.Food;
  * @date 2019/6/26 4:25 PM
  */
 @Mapper
+@CacheNamespace
 public interface FoodMapper {
 
     @Select("select * from food where id=#{id}")
