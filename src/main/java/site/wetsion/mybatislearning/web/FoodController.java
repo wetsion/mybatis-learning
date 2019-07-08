@@ -100,4 +100,14 @@ public class FoodController {
     public void test6() {
         foodService.get();
     }
+
+    @GetMapping("/mybatis/test7")
+    public void test7() {
+        foodService.set();
+    }
+
+    @GetMapping("/mybatis/test8")
+    public void test8() {
+        foodService.set2();
+    }
 }

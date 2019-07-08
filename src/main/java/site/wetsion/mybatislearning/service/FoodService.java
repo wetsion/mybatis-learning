@@ -13,16 +13,25 @@ import site.wetsion.mybatislearning.modal.Food;
  */
 @Service
 @Slf4j
-@Transactional
 public class FoodService {
 
     @Autowired
     FoodMapper foodMapper;
 
+    @Transactional
     public void get() {
         Food food = foodMapper.getById(1L);
         log.info(JSON.toJSONString(food));
         Food food2 = foodMapper.getById(1L);
         log.info(JSON.toJSONString(food2));
+    }
+
+    public void set() {
+        foodMapper.insert("aa", "blue");
+    }
+
+    @Transactional
+    public void set2() {
+        foodMapper.insert("aa", "blue");
     }
 }
